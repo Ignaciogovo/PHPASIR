@@ -1,0 +1,26 @@
+Condicionales:
+	IF:
+	if(){
+	accion1;
+	}elseif{
+	accion2;
+	}else{
+	accion3;
+	}
+
+	SWITCH
+	switch($variable){
+	case "caso1":
+	code;
+	break;
+	case "caso2":
+	code;
+	break;
+	case "caso3":
+	code;
+	break;
+	default:
+	code;
+	break;
+}
+https://github.com/Pollitodetroya/PHPASIR.git
