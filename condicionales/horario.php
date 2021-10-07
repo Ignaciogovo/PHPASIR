@@ -71,7 +71,7 @@
             
             break;
     };
-    echo "</br>";
+    echo "</br>" . "Son las $hora:$minuto </br>" ;
     if ($dia < 6) {
         switch ($hora) {
             case 8:
