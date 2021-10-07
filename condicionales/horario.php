@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horario</title>
+    <title>TIMETABLE</title>
 </head>
 
 <body>
-    <H1>Horario de tu dia</H1>
+    <H1>My TIMETABLE</H1>
     <?php
     $dia = date("N");
     $hora1;
@@ -22,112 +22,112 @@
     $minuto = date("i");
     switch ($dia) {
         case 1:
-            echo "Lunes";
-            $hora1 = "AW";
-            $hora2 = "AW";
-            $hora3 = "AW";
-            $hora4 = "Servicios en Red";
-            $hora5 = "Servicios en Red";
-            $hora6 = "Servicios en Red";
+            echo "Monday";
+            $hora1 = "Implementation of web applications";
+            $hora2 = "Implementation of web applications";
+            $hora3 = "Implementation of web applications";
+            $hora4 = "network services";
+            $hora5 = "network services";
+            $hora6 = "network services";
             break;
         case 2:
-            echo "Martes";
-            $hora1 = "ASO";
-            $hora2 = "ASO";
-            $hora3 = "ASO";
-            $hora4 = "Seguridad";
-            $hora5 = "Empresa";
-            $hora6 = "Empresa";
+            echo "Tuesday";
+            $hora1 = "Operating systems management";
+            $hora2 = "Operating systems management";
+            $hora3 = "Operating systems management";
+            $hora4 = "security";
+            $hora5 = "business";
+            $hora6 = "business";
             break;
         case 3:
-            echo "Miercoles";
-            $hora1 = "ASO";
-            $hora2 = "ASO";
-            $hora3 = "ASO";
-            $hora4 = "Servicios en Red";
-            $hora5 = "Servicios en Red";
-            $hora6 = "Servicios en Red";
+            echo "Wednesday";
+            $hora1 = "Operating systems management";
+            $hora2 = "Operating systems management";
+            $hora3 = "Operating systems management";
+            $hora4 = "network services";
+            $hora5 = "network services";
+            $hora6 = "network services";
             break;
         case 4:
-            echo "Jueves";
-            $hora1 = "BBDD";
-            $hora2 = "BBDD";
-            $hora3 = "BBDD";
-            $hora4 = "Seguridad";
+            echo "Thursday";
+            $hora1 = "database";
+            $hora2 = "database";
+            $hora3 = "database";
+            $hora4 = "Security";
             $hora5 = "English";
             $hora6 = "English";
             break;
         case 5:
-            echo "viernes";
+            echo "Friday";
             $hora1 = "English";
-            $hora2 = "Seguridad";
-            $hora3 = "Seguridad";
-            $hora4 = "AW";
-            $hora5 = "Empresa";
-            $hora6 = "Empresa";
+            $hora2 = "security";
+            $hora3 = "security";
+            $hora4 = "Implementation of web applications";
+            $hora5 = "business";
+            $hora6 = "business";
             break;
         default:
-            echo "Es Fin de semana</br>Puedes descansar";
+            echo "It's weekend</br>You can rest ";
             
             break;
     };
-    echo "</br>" . "Son las $hora:$minuto </br>" ;
+    echo "</br>" . "Ii's $hora:$minuto </br>" ;
     if ($dia < 6) {
         switch ($hora) {
             case 8:
                 if ($minuto > 15) {
-                    echo "Tienes $hora1";
+                    echo "You have $hora1";
                 } else {
-                    echo "No tienes horario de clase";
+                    echo "You don't have classes now";
                 };
                 break;
             case 9:
                 if ($minuto > 15) {
-                    echo "Tienes $hora2";
+                    echo "You have $hora2";
                 } else {
-                    echo "Tienes $hora1";
+                    echo "You have $hora1";
                 };
                 break;
             case 10:
                 if ($minuto > 15) {
-                    echo "Tienes $hora3";
+                    echo "You have $hora3";
                 } else {
-                    echo "Tienes $hora2";
+                    echo "You have $hora2";
                 };
                 break;
             case 11:
                 if ($minuto > 15 and $minuto < 45) {
-                    echo "RECREO";
+                    echo "BREAK";
                 } elseif ($minuto > 45) {
-                    echo "Tienes $hora4";
+                    echo "You have $hora4";
                 } else {
-                    echo "Tienes $hora3";
+                    echo "You have $hora3";
                 };
                 break;
             case 12:
                 if ($minuto < 45) {
-                    echo "Tienes $hora4";
+                    echo "You have $hora4";
                 } else {
-                    echo "Tienes $hora5";
+                    echo "You have $hora5";
                 };
                 break;
             case 13:
                 if ($minuto < 45) {
-                    echo "Tienes $hora5";
+                    echo "You have $hora5";
                 } else {
-                    echo "Tienes $hora6";
+                    echo "You have $hora6";
                 };
                 break;
             case 14:
                 if ($minuto < 45) {
-                    echo "Tienes $hora6";
+                    echo "You have $hora6";
                 } else {
 
-                    echo "No tienes horario de clase";
+                    echo "You don't have classes now ";
                 };
                 break;
             default:
-                echo "No tienes horario de clase";
+                echo "You don't have classes now";
                 break;
         };
     };
@@ -136,7 +136,7 @@
                 <tr><td>$hora1</td></tr>
                 <tr><td>$hora2</td></tr>
                 <tr><td>$hora3</td></tr>
-                <tr><td>Recreo</td></tr>
+                <tr><td>BREAK</td></tr>
                 <tr><td>$hora4</td></tr>
                 <tr><td>$hora5</td></tr>
                 <tr><td>$hora6</td></tr>
