@@ -37,8 +37,17 @@
         $res = $num1 % $num2;
         print "El resultado es " . $res . "</br>";
     }
+    function squareRoot($num)
+    {
+        echo "El resultado es " . sqrt($num) . "</br>";
+    }
+    function exponentialExpression($num1, $num2)
+    {
+        echo "El resultado es " . pow($num1, $num2) . "</br>";
+    }
     $num1 = $_POST["num1"];
     $num2 = $_POST["num2"];
+    $num3 = $_POST["num3"];
     $opera = $_POST["operacion"];
     if (is_numeric($num1) and is_numeric($num2)) {
         switch ($opera) {
@@ -57,11 +66,39 @@
             case "%":
                 resto($num1, $num2);
                 break;
-        };
-    } else {
-        echo "<H1>NO VALIDO<H1>";
+            case "√":
+                echo "<h2>Por favor, en el caso de raiz cuadrada use solo la primera casilla</h2>";
+                break;
+            case "^2":
+                exponentialExpression($num1, 2);
+                break;
+            case "^3":
+                exponentialExpression($num1, 3);
+                break;
+            case "^n":
+                exponentialExpression($num1, $num2);
+                break;
+            }
+        }elseif (is_numeric($num1) or is_numeric($num2)) {
+        if (is_numeric($num1)) {
+            squareRoot($num1);
+        }elseif ($num2) {
+        squareRoot($num2);
+    }}else {
+        echo "<p>Calculadora no operativa<p>";
     }
+    if (is_numeric($num3)) {
+        echo "<br><br><br>Serie de Fibonacci";
+        $va1 = 0;
+        $va2 = 1;
+        while ($va1< $num3) {
+            echo " <br> $va1 <br> $va2 <br>";
+            $va1 = $va1 + $va2;
+            $va2 = $va1 + $va2;
+        };
+    };
     echo '<a href="calculadora.html">Volver a operar</a>';
+
     ?>
 </body>
 
