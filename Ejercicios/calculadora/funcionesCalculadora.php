@@ -70,28 +70,49 @@
                 echo "<h2>Por favor, en el caso de raiz cuadrada use solo la primera casilla</h2>";
                 break;
             case "^2":
-                exponentialExpression($num1, 2);
+                echo "<h2>Por favor, en el caso de elevar al cuadrado use solo la primera casilla</h2>";
                 break;
             case "^3":
-                exponentialExpression($num1, 3);
+                echo "<h2>Por favor, en el caso de elevar al cubo use solo la primera casilla</h2>";
                 break;
             case "^n":
                 exponentialExpression($num1, $num2);
                 break;
-            }
-        }elseif (is_numeric($num1) or is_numeric($num2)) {
+        }
+    } elseif (is_numeric($num1) or is_numeric($num2)) {
         if (is_numeric($num1)) {
-            squareRoot($num1);
-        }elseif ($num2) {
-        squareRoot($num2);
-    }}else {
+            switch ($opera) {
+                case "√":
+                    squareRoot($num1);
+                    break;
+                case "^2":
+                    exponentialExpression($num1, 2);
+                    break;
+                case "^3":
+                    exponentialExpression($num1, 3);
+                    break;
+            }
+        } elseif ($num2) {
+            switch ($opera) {
+                case "√":
+                    echo "<h2>Por favor, en el caso de raiz cuadrada use solo la primera casilla</h2>";
+                    break;
+                case "^2":
+                    echo "<h2>Por favor, en el caso de elevar al cuadrado use solo la primera casilla</h2>";
+                    break;
+                case "^3":
+                    echo "<h2>Por favor, en el caso de elevar al cubo use solo la primera casilla</h2>";
+                    break;
+            }
+        }
+    } else {
         echo "<p>Calculadora no operativa<p>";
     }
     if (is_numeric($num3)) {
         echo "<br><br><br>Serie de Fibonacci";
         $va1 = 0;
         $va2 = 1;
-        while ($va1< $num3) {
+        while ($va1 < $num3) {
             echo " <br> $va1 <br> $va2 <br>";
             $va1 = $va1 + $va2;
             $va2 = $va1 + $va2;
