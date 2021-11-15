@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
-
-select,option {
-  font-family: verdana;
-  font-size: 20px;
-  border-left-style: solid
-}
-        </style>
+        select,
+        option {
+            font-family: verdana;
+            font-size: 20px;
+            border-left-style: solid
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<form action="Calculadora.php" method="post">
+    <form action="Calculadora.php" method="post">
         <fieldset><br>
             <legend>Calculadora</legend>
-        <label >Numero1</label>
-        <input type="text" name="num1">
-        <select name="operacion">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-            <option value="%">Resto</option>
-            <option value="√">√</option>
-            <option value="^2">^2</option>
-            <option value="^3">^3</option>
-            <option value="^n">^n</option>
-        </select>
-        <label>Numero2</label>
-        <input type="text" name="num2">
-        <label>=</label><br><br><br> 
-        <label>Fibonacci</label>
-        <p>¿Hasta donde quieres llegar?(Puedes dejarlo en blanco)</p>
-        <input type="text" name="num3"><br><br><br>
+            <label>Numero1</label>
+            <input type="text" name="num1">
+            <select name="operacion">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">Resto</option>
+                <option value="√">√</option>
+                <option value="^2">^2</option>
+                <option value="^3">^3</option>
+                <option value="^n">^n</option>
+            </select>
+            <label>Numero2</label>
+            <input type="text" name="num2">
+            <label>=</label><br><br><br>
+        </fieldset>
+        <fieldset>
+            <label>Fibonacci</label>
+            <p>¿Hasta donde quieres llegar?(Puedes dejarlo en blanco)</p>
+            <input type="text" name="num3"><br><br><br>
+        </fieldset>
         <input type="submit" name="" value="resolver"><br><br><br>
-</form>
+    </form>
 
 
 </body>
+
 </html>
