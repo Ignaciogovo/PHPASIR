@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de vuelos</title>
+</head>
+<body>
+    <h1>Gestión de vuelos</h1>
+    <form action="gestion.php" method="post">
+        <fieldset>
+            <legend>Vuelo 1</legend><br>
+            <label>Código</label>
+            <input type="text" name="infovuelo1[codigo1]" required><br>
+            <label>Ciudad Origen</label>
+            <input type="text" name="infovuelo1[origen1]" required><br>
+            <label>Ciudad Destino</label>
+            <input type="text" name="infovuelo1[destino1]" required><br>
+            <label>Precio</label>
+            <input type="number" name="infovuelo1[precio1]" min="1" required><br>
+            <label>fecha Salida</label>
+            <input type="date" name="infovuelo1[fecha1]" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Vuelo 2</legend><br>
+            <label>Código</label>
+            <input type="text" name="infovuelo2[codigo2]" required><br>
+            <label>Ciudad Origen</label>
+            <input type="text" name="infovuelo2[origen2]" required><br>
+            <label>Ciudad Destino</label>
+            <input type="text" name="infovuelo2[destino2]" required><br>
+            <label>Precio</label>
+            <input type="number" name="infovuelo2[precio2]" min="1" required><br>
+            <label>fecha Salida</label>
+            <input type="date" name="infovuelo2[fecha2]" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Herramientas</legend>
+            <select name="herramienta">
+                <option value="union">Une vuelos</option>
+                <option value="diferencia">Diferencia entre vuelos</option>
+                <option value="ordena">Ordena vuelos</option>
+                <option value="informacion">Información común</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
