@@ -15,10 +15,10 @@
         "Volotea-EA21" => array(100,100),
         "Iberia-WE44"  => array(340,85),
         "Ryanair-EW44" => array(45,360),
-        "Vueling-ZK87" => array(600),
-        "Volotea-UA21" => array(65),
-        "Iberia-WH44" => array(90),
-        "Ryanair-EL00" => array(50),
+        "Vueling-ZK87" => 600,
+        "Volotea-UA21" => 65,
+        "Iberia-WH44" => 90,
+        "Ryanair-EL00" => 50,
     );
     $pasajeros = array(
         "Vueling-AE12" => array(90,87,86),
