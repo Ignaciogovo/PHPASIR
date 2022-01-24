@@ -27,6 +27,24 @@ include("arraybd.php");
         }
         echo "La prueba es $total ";
     }
-    numeroTotal($duracion);
+     function exportardato($array, $condicion){
+        
+    }
+    function exportardatos($array){
+        $datos = array(0);
+        foreach ($array as $key => $value) {
+            if(is_array($value)){
+                foreach ($value as $k => $v){
+                    array_push($datos,$v);
+                }
+            }else{
+                array_push($datos,$value);
+            }
+        }
+        array_shift($datos);
+        echo "La prueba es: ";
+        print_r($datos);
+    }
+    exportardatos($fabricantes);
 
 ?>
