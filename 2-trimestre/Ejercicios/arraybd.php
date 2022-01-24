@@ -1,6 +1,6 @@
 <?php 
 
-    $destinos = array(
+    $Adestinos = array(
         "Vueling-AE12" => array("Milán","Roma"),
         "Volotea-EA21" => array("Roma","Roma"),
         "Iberia-WE44"  => array("Estambul"),
@@ -10,7 +10,7 @@
         "Iberia-WH44" => array("Roma"),
         "Ryanair-EL00" => array("Madrid"),
     );
-    $duracion = array(
+    $Aduracion = array(
         "Vueling-AE12" => array(120,115),
         "Volotea-EA21" => array(100,100),
         "Iberia-WE44"  => array(340,85),
@@ -20,7 +20,7 @@
         "Iberia-WH44" => 90,
         "Ryanair-EL00" => 50,
     );
-    $pasajeros = array(
+    $Apasajeros = array(
         "Vueling-AE12" => array(90,87,86),
         "Volotea-EA21" => array(75,97,66),
         "Iberia-WE44"  => array(100,81,40),
@@ -30,7 +30,7 @@
         "Iberia-WH44" => array(86,84),
         "Ryanair-EL00" => array(75,67),
     );
-    $fabricantes = array(
+    $Afabricantes = array(
         "Vueling-AE12" => "Boeing",
         "Volotea-EA21" => "Airbus",
         "Iberia-WE44"  => "Airbus",
@@ -39,9 +39,9 @@
         "Volotea-UA21" => "Boeing",
         "Iberia-WH44" => "Boeing",
         "Ryanair-EL00" => "Airbus",
-    )
-    $fabricantes2 = array(
+    );
+    $Afabricantes2 = array(
         "Boeing" => array("Vueling-AE12","Ryanair-EW44","Volotea-UA21","Iberia-WH44"),
         "Airbus" => array("Volotea-EA21","Iberia-WE44","Vueling-ZK87","Ryanair-EL00"),
-    )
+    );
 ?>
