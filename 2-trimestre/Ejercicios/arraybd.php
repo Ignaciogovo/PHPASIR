@@ -40,8 +40,4 @@
         "Iberia-WH44" => "Boeing",
         "Ryanair-EL00" => "Airbus",
     );
-    $Afabricantes2 = array(
-        "Boeing" => array("Vueling-AE12","Ryanair-EW44","Volotea-UA21","Iberia-WH44"),
-        "Airbus" => array("Volotea-EA21","Iberia-WE44","Vueling-ZK87","Ryanair-EL00"),
-    );
 ?>
