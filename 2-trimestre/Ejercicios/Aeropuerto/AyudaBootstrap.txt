@@ -1,0 +1,11 @@
+Para el diseño de la página he usado bootstrap, un framework de css.
+Sin conocimientos previos sobre esta tecnología, a base de varios tutoriales
+se ha podido realizar el diseño.
+Estos tutoriales son:
+página oficial de bootstrap-> https://getbootstrap.com/docs/5.0/getting-started/introduction/
+slider -> https://www.youtube.com/watch?v=BwAb-zkOGLE&t=232s
+Estructuras basicas -> https://youtu.be/ZuOL_DoaG9k
+Copias de diseño -> https://youtu.be/yC6oeRP585A
+
+El bootstrap utilizado es bastante basico y muchas ocasiones copiado, sin embargo a medida que se realicen más proyectos
+en los que haya un diseño podré documentarme mejor y ser más creativo. 
