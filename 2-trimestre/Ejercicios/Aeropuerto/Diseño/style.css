@@ -1,0 +1,44 @@
+:root{
+    --dark: #17171a;
+    --dark-x: #1e2126;
+    --light: #ffffff;
+}
+body{
+    font-family: 'Spartan', sans-serif;
+    font-weight: 300;
+}
+.bg-dark{
+    background-color: var(--dark) !important;
+}
+a:link, a:visited, a:hover, a:active{
+    color: var(--light);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(218, 218, 40);
+}
+.img-1{
+    background-image: url('aeropuertoDubai.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.img-2{
+    background-image: url('aircraft.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.tamañofondo{
+    height: 100vh;
+}
+@media (max-width: 988px) {
+    .tamañofondo {
+    height: 40vh;
+  }
+  .img-2{
+    background-image: url('aircraft2.jpg');
+    background-position: top;
+}
+.eliminarfondo{
+        display: none;
+}
+} 
