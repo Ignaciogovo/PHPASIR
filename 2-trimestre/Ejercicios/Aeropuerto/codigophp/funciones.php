@@ -1,12 +1,14 @@
 <?php
 
 //FUNCIONES GENERALES
+    //Función para sacar la media de un array
     function mediaArray($array){
         $suma = array_sum($array);
         $total = count($array);
         $resultado=round(($suma/$total), 2);
         return ($resultado);
     }
+    //Funcion para convertir minutos en horas
     function convertirEnhoras($minutos){
         $horas = $minutos/60;
         $hora = floor($horas);
@@ -14,6 +16,7 @@
         $min = $resto * 60;
         return array($hora,$min);
     }
+    //Función para sacar la suma total de un array cuanto tiene varios arrays dentro.
     function numeroTotal($array){
         $total = 0; //En esta variable se almacena la suma de todos los valores obtenidos en el array
         foreach ($array as $key => $value) {
@@ -27,43 +30,15 @@
         }
         return $total;
     }
-    function exportardato($array, $condicion){
-        if(isset($condicion)){
-            //Con el foreach recorremos el array pedido
-            foreach ($array as $key => $value) {
-                if($key == $condicion){
-                    if(is_array($value)){//Si dentro del array, hay un array se ejecuta este if
-                        foreach ($value as $k => $v){
-                            array_push($datos,$v); //Metemos los valores del array pedido al array datos
-                        }
-                    }else{  //Si lo que hay dentro no es un array se ejecuta el else.
-                        array_push($datos,$value);
-                    }
-                }
-            }
-        }else{
-            //Con el foreach recorremos el array pedido
-            foreach ($array as $key => $value) {
-                if(is_array($value)){//Si dentro del array, hay un array se ejecuta este if
-                    foreach ($value as $k => $v){
-                        array_push($datos,$v); //Metemos los valores del array pedido al array datos
-                    }
-                }else{  //Si lo que hay dentro no es un array se ejecuta el else.
-                    array_push($datos,$value);
-                }
-            }
-        }
-        array_shift($datos); //Eliminamos el primer valor del array datos
-        return $datos;
-    }
+    //Funcion para sacar los datos y pasarlos a un array
     function exportardatos($array, $condicion){
         //Generamos el array $datos
         $datos = array(0);
-        if(isset($condicion)){
-            //Con el foreach recorremos el array pedido
+        if(isset($condicion)){ //Con esta condición sacamos solamente los datos especificos que queramos
+            //recorremos el array pedido
             foreach ($array as $key => $value) {
                 if($key == $condicion){
-                    if(is_array($value)){//Si dentro del array, hay un array se ejecuta este if
+                    if(is_array($value)){//Si el valor es un array se ejecuta este if
                         foreach ($value as $k => $v){
                             array_push($datos,$v); //Metemos los valores del array pedido al array datos
                         }
@@ -72,10 +47,10 @@
                     }
                 }
             }
-        }else{
-            //Con el foreach recorremos el array pedido
+        }else{ //Si la condición es null entonces:
+            //recorremos el array pedido
             foreach ($array as $key => $value) {
-                if(is_array($value)){//Si dentro del array, hay un array se ejecuta este if
+                if(is_array($value)){//Si el valor es un array se ejecuta este if
                     foreach ($value as $k => $v){
                         array_push($datos,$v); //Metemos los valores del array pedido al array datos
                     }
@@ -86,15 +61,15 @@
         }
         array_shift($datos); //Eliminamos el primer valor del array datos
         return $datos;
-
     }
+    //Función para calcular las veces que se repite un valor de un array.
     function calculoderepeticiones($array){
         $repeticiones = array_flip($array); //Convertirmos los valores del array en key, para más tarde asignarle el número de veces que se ha repetido el key
         foreach ($repeticiones as $key => $value){ // Colocamos el número 0 a cada valor de $repeticiones(Punto de partida);
             $repeticiones[$key] = 0;
         }
         foreach($repeticiones as $key => $value){
-            foreach ($array as $llave => $valor){
+            foreach ($array as $llave => $valor){ 
                 if ($key == $valor){
                     $repeticiones[$key] = $repeticiones[$key] + 1;
                 }
@@ -104,14 +79,7 @@
         $repeticiones=array_reverse($repeticiones); // ordenamos de forma inversa el array
         return($repeticiones);
     }
-    // $numero=exportardatos($destinos,null);
-    // numeroConexiones($numero);
-    // $minutos = mediaArray($numero);
-    // numeroTotal($numero);
-    // $horas = convertirEnhoras($minutos);
-    // print_r($horas);
-    
-
+//Con esta función a cada "tabla de la base de datos" se le asigna un numero
 function asignacionarray($numero){
     include("arraybd.php");
     switch ($numero) {
