@@ -30,6 +30,12 @@ a:hover{
 .tamañofondo{
     height: 100vh;
 }
+.footer{
+    height: 50vh;
+}
+.enlacefooter{
+    color: var(--dark) !important;
+}
 @media (max-width: 988px) {
     .tamañofondo {
     height: 40vh;
