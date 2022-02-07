@@ -39,5 +39,23 @@
         "Volotea-UA21" => "Boeing",
         "Iberia-WH44" => "Boeing",
         "Ryanair-EL00" => "Airbus",
+        "Vueling-WE45" => "Boeing",
+        "Volotea-IJ30" => "Lockheed Martin",
+        "Iberia-QW00" => "Airbus",
+        "Ryanair-LK11" => "Lockheed Martin",
+        "Vueling-RY23" => "Airbus",
+        "Volotea-HG77" => "Lockheed Martin",
+        "Iberia-PL81" => "Airbus",
+        "Ryanair-FV19" => "Airbus",
+    );
+    $Acombustible = array(
+        "Vueling-AE12" => array(390,399),
+        "Volotea-EA21" => array(421,404),
+        "Iberia-WE44"  => 389,
+        "Ryanair-EW44" => 387,
+        "Vueling-ZK87" => 413,
+        "Volotea-UA21" => 379,
+        "Iberia-WH44" => 388,
+        "Ryanair-EL00" => 410,
     );
 ?>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <form action="comprobacion.php" method="post">
+        <label>Nombre(*)</label>
+        <input type="text" name="nombre">
+        <label for="">apellidos(*)</label>
+        <input type="text" name="apellidos">
+        <label for="">edad</label>
+        <input type="number" name="edad" min="0" max="120" size="3">
+        <input type="checkbox" name="activo">
+        <label for="">activo</label>
+        <input type="submit" value="Enviar formulario">
+    </form>
+
+</body>
+</html>
